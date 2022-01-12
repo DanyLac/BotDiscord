@@ -17,7 +17,7 @@ const commands = [
     .addStringOption(option =>
     option.setName('recherche')
     .setDescription('Votre recherche')
-    .setRequired(true))
+    .setRequired(true)),
     
     //new SlashCommandBuilder().setName('searchImage').setDescription('Affiche une image google!')
 ]
