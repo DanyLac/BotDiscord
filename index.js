@@ -1,5 +1,6 @@
 const { time, TimestampStyles, SlashCommandBuilder } = require('@discordjs/builders');
 const { Client, Intents, UserFlags, User, GuildMember } = require('discord.js');
+const { url } = require('inspector');
 require("dotenv").config();
 const botToken = process.env.TOKEN;
 
@@ -35,8 +36,10 @@ client.on('interactionCreate', async interaction => {
 
         
     
-    }else if(commandName === 'searchImage'){
-
+    }else if(commandName === 'searchimage'){
+        const userSearchGoogleImage = options.getString("recherche");
+        const urlImage = `https://www.google.be/imghp?hl=fr&tab=ri&authuser=0&ogbl/search?q=${userSearchGoogleImage}`
+        interaction.reply(`Les infos sur Google : ${urlImage}`)
 
     
     }else if(commandName === 'time'){
