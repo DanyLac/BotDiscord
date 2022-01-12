@@ -18,6 +18,11 @@ const commands = [
     option.setName('recherche')
     .setDescription('Votre recherche')
     .setRequired(true)),
+    new SlashCommandBuilder().setName('youtube').setDescription('Renvoie votre recherche Youtube!')
+    .addStringOption(option =>
+    option.setName('recherche')
+    .setDescription('Votre recherche')
+    .setRequired(true)),
     
     //new SlashCommandBuilder().setName('searchImage').setDescription('Affiche une image google!')
 ]
