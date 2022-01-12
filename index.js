@@ -30,6 +30,11 @@ client.on('interactionCreate', async interaction => {
         const userSearch = options.getString("recherche");
         const url = `https://www.google.com/search?q=${userSearch}`
         interaction.reply(`Les infos sur Google : ${url}`)
+    }else if (commandName === "youtube") {
+
+        const userSearch = options.getString("recherche");
+        const url = `https://www.youtube.com/search?q=${userSearch}`
+        interaction.reply(`Les infos sur Youtube : ${url}`)
     
 		
 
