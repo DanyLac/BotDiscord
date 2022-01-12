@@ -24,6 +24,12 @@ client.on('interactionCreate', async interaction => {
     } else if (commandName === 'user') {
         //let user = interaction.options.get("utilisateur");
        await interaction.reply(`Your username: ${interaction.user.username}\nYour ID: ${interaction.user.id}`);
+    }else if (commandName === "google") {
+
+        const userSearch = option.getString("recherche");
+        const url `https://www.google.com/search?q=${userSearch}`
+        interaction.reply(`Les infos sur Google : ${url}`)
+    }
 		
 
 
@@ -46,6 +52,8 @@ client.on('interactionCreate', async interaction => {
       else{
         await interaction.reply(`Hello [user],il est actuellement ${hours}:${minute}:${second},c'est le soir`)
       }  
+
+      
        
     };
     
