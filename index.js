@@ -26,7 +26,7 @@ client.on('interactionCreate', async interaction => {
        await interaction.reply(`Your username: ${interaction.user.username}\nYour ID: ${interaction.user.id}`);
     }else if (commandName === "google") {
 
-        const userSearch = option.getString("recherche");
+        const userSearch = options.getString("recherche");
         const url = `https://www.google.com/search?q=${userSearch}`
         interaction.reply(`Les infos sur Google : ${url}`)
     
