@@ -40,12 +40,12 @@ client.on('interactionCreate', async interaction => {
         const minute = currentDate.getMinutes();
         const second= currentDate.getSeconds()
         
-    // if(hours<12){
-    //     await interaction.reply(`Hello [user],il est actuellement ${hours}:${minute}:${second},c'est le matin`)
-    // }
-    //   else{
-    //     await interaction.reply(`Hello [user],il est actuellement ${hours}:${minute}:${second},c'est le soir`)
-    //   }  
+    if(hours<12){
+        await interaction.reply(`Hello [user],il est actuellement ${hours}:${minute}:${second},c'est le matin`)
+    }
+      else{
+        await interaction.reply(`Hello [user],il est actuellement ${hours}:${minute}:${second},c'est le soir`)
+      }  
        
     };
     
