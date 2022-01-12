@@ -13,6 +13,12 @@ const commands = [
     new SlashCommandBuilder().setName('server').setDescription('Replies with server info!'),
     new SlashCommandBuilder().setName('user').setDescription('Replies with user info!'),
     new SlashCommandBuilder().setName('time').setDescription('Replies with user info!'),
+    new SlashCommandBuilder().setName('google').setDescription('Renvoie votre recherche Google!')
+    .addStringOption(option =>
+    option.setName('recherche')
+    .setDescription('Votre recherche')
+    .setRequired(true))
+    
     //new SlashCommandBuilder().setName('searchImage').setDescription('Affiche une image google!')
 ]
     .map(command => command.toJSON());
