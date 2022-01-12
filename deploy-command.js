@@ -28,6 +28,11 @@ const commands = [
     option.setName('recherche')
     .setDescription('Votre recherche')
     .setRequired(true)),
+    new SlashCommandBuilder().setName('meteo').setDescription('Renvoie !a météo')
+    .addStringOption(option =>
+    option.setName('recherche')
+    .setDescription('Votre recherche')
+    .setRequired(true)),
     
     
 ]

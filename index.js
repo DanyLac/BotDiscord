@@ -36,16 +36,14 @@ client.on('interactionCreate', async interaction => {
         const url = `https://www.youtube.com/search?q=${userSearch}`
         interaction.reply(`Les infos sur Youtube : ${url}`)
     
-		
-
-
-        
-    
-    }else if(commandName === 'searchimage'){
+	}else if(commandName === 'searchimage'){
         const userSearchGoogleImage = options.getString("recherche");
-        const urlImage = `https://www.google.be/imghp?hl=fr&tab=ri&authuser=0&ogbl/search?q=${userSearchGoogleImage}`
+        const urlImage = `https://www.google.be/search?q=${userSearchGoogleImage}&hl=fr&sxsrf=AOaemvKnQn0_F0rgXON2HLkUFjhk3tFvEw:1642019793517&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj-toa0iK31AhUPyaQKHcYgCGwQ_AUoAXoECBAQAw&cshid=1642019913916797&biw=1920&bih=969&dpr=1`
         interaction.reply(`Les infos sur Google : ${urlImage}`)
-
+    }else if(commandName === 'météo'){
+        const userSearchMéteo = options.getString("recherche");
+        const urlMétéo = `https://www.google.be/search?q=météo${userSearchMéteo}`
+        interaction.reply(`Les infos sur Google : ${urlMétéo}`)
     
     }else if(commandName === 'time'){
         const currentDate = new Date();
@@ -54,10 +52,10 @@ client.on('interactionCreate', async interaction => {
         const second= currentDate.getSeconds()
         
     if(hours<12){
-        await interaction.reply(`Hello [user],il est actuellement ${hours}:${minute}:${second},c'est le matin`)
+        await interaction.reply(`Hello ${interaction.user.username},il est actuellement ${hours}:${minute}:${second},c'est le matin`)
     }
       else{
-        await interaction.reply(`Hello [user],il est actuellement ${hours}:${minute}:${second},c'est le soir`)
+        await interaction.reply(`Hello ${interaction.user.username},il est actuellement ${hours}:${minute}:${second},c'est le soir`)
       }  
 
       
