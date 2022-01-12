@@ -29,7 +29,7 @@ client.on('interactionCreate', async interaction => {
 
 
         
-    await interaction.reply(`user ${GuildMember.User}`);
+    
     }else if(commandName === 'searchImage'){
 
 
